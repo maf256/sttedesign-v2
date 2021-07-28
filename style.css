@@ -5,9 +5,41 @@
     box-sizing: border-box;
   }
 
-.logo {
+.logo, .ham {
     width: 48.5px;
     height: 60px;
+}
+
+.ham {
+    display: none;
+}
+
+#ham-show nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000d9;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000d9;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#ham-show nav a {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#ham-show .ham {
+    position: relative;
+    z-index: 1;
+}
+
+#ham-show .logo {
+    position: relative;
+    z-index: 1;
 }
 
 header {
@@ -38,7 +70,7 @@ header {
     font-size: 20px;
     padding-left: 20px;
     text-decoration: none;
-
+    text-shadow: 1px 1px 1px white;
 }
 .menu-container a:active,
 .menu-container a:hover{
@@ -117,4 +149,14 @@ footer {
     padding-top: 2%;
     display: flex;
     justify-content: center;
+}
+
+
+@media (max-width: 700px) {
+    .menu-container nav {
+        display: none;
+    }
+    .ham {
+        display: block;
+    }
 }
