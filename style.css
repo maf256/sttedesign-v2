@@ -5,12 +5,17 @@
     box-sizing: border-box;
   }
 
-.logo, .ham {
+.logo {
     width: 48.5px;
     height: 60px;
 }
 
+.menu-container a {
+}
 .ham {
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
     display: none;
 }
 
@@ -158,5 +163,14 @@ footer {
     }
     .ham {
         display: block;
+    }
+}
+
+@media (min-width: 701px) {
+    .menu-container nav {
+        display: flex;
+    }
+    .ham {
+        display: none;
     }
 }

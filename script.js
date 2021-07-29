@@ -1,17 +1,21 @@
 function hamOnClick(event) {
     let menuContainer = document.querySelectorAll('.menu-container')[0]
-
-
-    let src = event.target.src
-    let srcArr = src.split('/')
-    let srcTarget = srcArr[srcArr.length - 1]
-    let target = srcTarget.split('.')[0]
-
-    if (target === 'ham') {
-        event.target.src = 'times.png'
+    let ham = document.querySelectorAll('.ham')[0]
+    if (ham.innerText === '☰') {
+        ham.innerText = '╳'
         menuContainer.setAttribute('id', "ham-show");
     } else {
-        event.target.src = 'ham.png'
+        ham.innerText = '☰'
         menuContainer.setAttribute('id', "");
     }
 }
+
+window.addEventListener('resize', function() {
+    if (window.screen.width > 700) {
+        ham.innerText = '☰'
+        menuContainer.setAttribute('id', "");
+
+        // headerTag.setAttribute('id', '')
+        // ham.setAttribute('src', hamSrc)
+    }
+})
