@@ -93,13 +93,13 @@ header {
     font-size: 4.5vw;
 }
 
-.main-top-img h1:hover {
+/* .main-top-img h1:hover {
     font-style: normal;
-    /* color:red; */
+    color:red;
 	transition: all 1.4s ease-in-out;
-}
+} */
 
-.main-Services {
+.main-Services , .project-container {
     display: flex;
     justify-content: space-evenly;
     background-color: #dbdad5;
@@ -109,7 +109,7 @@ header {
     padding: 10%;
 }
 
-.main-Services div {
+.main-Services div , .project-container div{
     box-sizing: border-box;
     width: 300px;
     height: 300px;
@@ -225,4 +225,23 @@ form {
 
 form label , form input{
     padding-bottom: 10px;
+}
+
+/* __________________________ project _____________________ */
+
+.project-container div a img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    /* transition: grayscale 10s; */
+    /* transition: border-radius 10s; */
+    /* transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68); */
+}
+
+.project-container div a img:hover,
+.project-container div a:hover,
+.project-container div:hover {
+    filter: grayscale(0%);
+    border-radius: 50%;
 }
