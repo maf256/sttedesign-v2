@@ -3,15 +3,16 @@ let headerTag = document.getElementById('header')
 function header () {
     const menuContainer = document.createElement('div')
     menuContainer.setAttribute('class', 'menu-container')
-    const logolink = document.createElement('a')
-    logolink.setAttribute('href','http://sitedesign.no/')
-    const logo = document.createElement ('img')
-    logo.setAttribute('src','logo.png')
-    logo.setAttribute('alt','sitedesign logo')
-    logolink.appendChild(logo)
-    menuContainer.appendChild(logolink)
-    const navbar = document.createElement('nav')
-    const Menulist = [
+    const logoLink = document.createElement('a')
+    logoLink.setAttribute('href','http://sitedesign.no/')
+    const logoImg = document.createElement ('img')
+    logoImg.setAttribute('src','logo.png')
+    logoImg.setAttribute('class','logo')
+    logoImg.setAttribute('alt','sitedesign logo')
+    logoLink.append(logoImg)
+    menuContainer.append(logoLink)
+    const navBar = document.createElement('nav')
+    const menuList = [
         {href: './index.html', name: 'Home'},
         {href: '#Services', name: 'Services'},
         {href: './project.html', name: 'Projects'},
@@ -19,39 +20,35 @@ function header () {
         {href: './about.html', name: 'About'},
         {href: './contact.html', name: 'Contact'},
     ]
-    for (let i = 0; i < Menulist.length; i++) {
-        // const element = Menulist[i];
+    for (let i = 0; i < menuList.length; i++) {
         const span = document.createElement('span')
-        const atag = document.createElement('a')
-        atag.setAttribute('href',Menulist[i].href)
-        let name = document.createTextNode(Menulist[i].name)
-        atag.appendChild(name)
-        span.appendChild(atag)
-        navbar.appendChild(span)        
+        const aTag = document.createElement('a')
+        aTag.setAttribute('href',menuList[i].href)
+        let name = document.createTextNode(menuList[i].name)
+        aTag.append(name)
+        span.append(aTag)
+        navBar.append(span)        
     }
-    menuContainer.appendChild(navbar)
-    const aham = document.createElement('a')
-    let hamname = document.createTextNode('☰')
-    // aham.onclick("hamOnClick(event)")
-    aham.addEventListener('click', () => {
-        let menuContainer = document.querySelectorAll('.menu-container')[0]
+    menuContainer.append(navBar)
+    const aTagHam = document.createElement('a')
+    let hamName = document.createTextNode('☰')
+    aTagHam.append(hamName)
+    aTagHam.addEventListener('click', () => {
         let body = document.getElementsByTagName('body')[0]
-        let ham = document.querySelectorAll('.ham')[0]
-        if (ham.innerText === '☰') {
-            ham.innerText = '╳'
+        if (aTagHam.innerText === '☰') {
+            aTagHam.innerText = '╳'
             menuContainer.setAttribute('id', "ham-show");
             body.style.overflow = 'hidden';
         } else {
             body.style.overflow = 'auto';
-            ham.innerText = '☰'
+            aTagHam.innerText = '☰'
             menuContainer.setAttribute('id', "");
         }
     })
-    aham.appendChild(hamname)
-    aham.classList.add('ham')
-    // aham.addsetAttribute('class','ham')
-    menuContainer.appendChild(aham)
-    headerTag.append(logolink)
+    
+    aTagHam.setAttribute('class', 'ham')
+    menuContainer.append(aTagHam)
+    headerTag.append(menuContainer)
 }
 
 header()
