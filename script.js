@@ -1,4 +1,5 @@
 let headerTag = document.getElementById('header')
+let foorterTag = document.getElementById('footer')
 
 function header () {
     const menuContainer = document.createElement('div')
@@ -52,6 +53,46 @@ function header () {
 }
 
 header()
+
+function footer() {
+    const div = document.createElement('div')
+    div.setAttribute('class', 'Footer')
+    const footerList = [
+        {href: 'https://facebook.com/konsulenthuset1', src: 'facebook.svg', alt:'Facebook Logo'},
+        {href: 'https://www.instagram.com/konsulenthuset', src: 'instagram.svg', alt:'instagram Logo'},
+        {href: 'https://linkedin.com/company/konsulenthuset', src: 'linkedin.svg', alt:'linkedin Logo'},
+        {href: 'mailto:info@sitedesing.no', src: 'email.svg', alt:'email Logo'},
+        {href: 'tel:+4740186111', src: 'phone-call.svg', alt:'phone Logo'},
+    ]
+    for (let i = 0; i < footerList.length; i++) {
+        const span = document.createElement('span')
+        const a = document.createElement('a')
+        const img = document.createElement('img')
+        a.setAttribute('href',footerList[i].href)
+        img.setAttribute('src',footerList[i].src)
+        img.setAttribute('alt',footerList[i].alt)
+        a.append(img)
+        span.append(a)
+        div.append(span)
+    }
+    const div2 = document.createElement('div')
+    div2.setAttribute('class','class="copyright')
+    const h4 = document.createElement('h4')
+    h4.innerHTML = '© 2018 All rights reserved by'
+    const a2 = document.createElement('a')  
+    a2.setAttribute('href','http://sitedesign.no')
+    a2.innerHTML = 'Sitedesign.no'
+    // let h = document.createTextNode('☰')
+    h4.append(a2)
+    div2.append(h4)
+    // div.append(div2)
+    foorterTag.append(div)
+    foorterTag.append(div2)
+
+    // foorterTag.append(div2)
+}
+
+footer ()
 
 // function hamOnClick(event) {
 //     let menuContainer = document.querySelectorAll('.menu-container')[0]
