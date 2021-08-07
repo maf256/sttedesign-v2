@@ -76,7 +76,7 @@ function footer() {
         div.append(span)
     }
     const div2 = document.createElement('div')
-    div2.setAttribute('class','class="copyright')
+    div2.setAttribute('class','copyright')
     const h4 = document.createElement('h4')
     h4.innerHTML = '© 2018 All rights reserved by'
     const a2 = document.createElement('a')  
