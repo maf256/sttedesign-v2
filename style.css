@@ -195,7 +195,7 @@ footer {
 
 /* _______________ Contact us ________________________*/
 
-.contact-container , .services-container{
+.contact-container {
     background-color: #dbdad5;
     padding: 5% 20%;
     width: 100%;
@@ -263,23 +263,25 @@ form label , form input{
 }
 
 /* _____________________________________ services ________________________ */
+
 .services-container {
     display: flex;
-    justify-content: space-around;
-    background-color: black;
-    overflow: hidden;
-
-}
-.services-container-div{
-    width: 300px;
-    height: 600px;
-    background-color: aqua;
-    overflow: hidden;
-
+    flex-direction: column;
+    margin: 5%;
 }
 
-.services-container div div img {
-    display: cover;
+.service-container {
+    display: flex;
+    justify-content: row;
+    margin-bottom: 2%;
+}
+
+.service-content, .service-img {
+    width: 50%;
+}
+
+.service-content {
+    margin: 2%;
 }
 
 @media (max-width: 750px) {
