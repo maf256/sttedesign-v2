@@ -150,8 +150,8 @@ header {
 
 }
 
-.main-Services p {
-    text-align: justify;
+.main-Services p , .contact-container p , .contact-container span{
+    text-align: inherit;
     font-weight: bold;
     font-size:20px;  
     margin: 4%;
@@ -195,7 +195,8 @@ footer {
 
 /* _______________ Contact us ________________________*/
 
-.contact-container {
+.contact-container , .services-container{
+    background-color: #dbdad5;
     padding: 5% 20%;
     width: 100%;
     display: flex;
@@ -259,6 +260,26 @@ form label , form input{
 .project-container div:hover {
     filter: grayscale(0%);
     border-radius: 30%;
+}
+
+/* _____________________________________ services ________________________ */
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    overflow: hidden;
+
+}
+.services-container-div{
+    width: 300px;
+    height: 600px;
+    background-color: aqua;
+    overflow: hidden;
+
+}
+
+.services-container div div img {
+    display: cover;
 }
 
 @media (max-width: 750px) {
