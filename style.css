@@ -265,15 +265,18 @@ form label , form input{
 /* _____________________________________ services ________________________ */
 
 .services-container {
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: 5%;
+    background-color: #dbdad5;
 }
 
 .service-container {
     display: flex;
     justify-content: row;
     margin-bottom: 2%;
+
 }
 
 .service-content, .service-img {
@@ -284,6 +287,24 @@ form label , form input{
     margin: 2%;
 }
 
+.service-content h1 {
+    color: goldenrod;
+    font-size: 28px;
+    margin: 2% 0;    
+}
+
+.service-content h2 {
+    font-size:24px;
+    margin: 2% 0;    
+
+}
+.service-content p {
+    font-size: 18px;
+    margin: 2% 0;    
+    font-weight: bold;
+    font
+
+}
 @media (max-width: 750px) {
     .menu-container nav {
         display: none;
