@@ -15,7 +15,7 @@ function header () {
     const navBar = document.createElement('nav')
     const menuList = [
         {href: './index.html', name: 'Home'},
-        {href: '#Services', name: 'Services'},
+        {href: './services.html', name: 'Services'},
         {href: './project.html', name: 'Projects'},
         {href: './demo.html', name: 'Demo'},
         {href: './about.html', name: 'About'},
