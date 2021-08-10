@@ -246,6 +246,7 @@ form label , form input{
 }
 
 .demo--subject {
+    padding: 4%;
     background-color: #d3d3d3;
 }
 
