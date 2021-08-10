@@ -58,8 +58,8 @@ function footer() {
     const div = document.createElement('div')
     div.setAttribute('class', 'Footer')
     const footerList = [
-        {href: 'https://facebook.com/konsulenthuset1', src: './img/facebook.svg', alt: 'facebookFacebook Logo'},
-        {href: 'https://www.instagram.com/konsulenthuset', src: './img/instagram.svg', alt:'instagram Logo'},
+        {href: 'https://www.facebook.com/sitedesign.no', src: './img/facebook.svg', alt: 'facebookFacebook Logo'},
+        {href: 'https://instagram.com/sitedesign.no', src: './img/instagram.svg', alt:'instagram Logo'},
         {href: 'https://linkedin.com/company/konsulenthuset', src: './img/linkedin.svg', alt:'linkedin Logo'},
         {href: 'mailto:info@sitedesing.no', src: './img/email.svg', alt:'email Logo'},
         {href: 'tel:+4740186111', src: './img/phone-call.svg', alt:'phone Logo'},
