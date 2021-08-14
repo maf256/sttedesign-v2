@@ -162,9 +162,6 @@ header {
 }
 
 footer {
-    /* border: 1px;
-    border-style: double;
-    border-color: black; */
     background-color: #c0c0c0;
     width:100%;
     height: 200px;
@@ -277,42 +274,34 @@ form label , form input{
 /* _____________________________________ services ________________________ */
 
 .services-container {
-    display: flex;
-    justify-content: flex-start;
-    margin: 5%;
     background-color: #dbdad5;
-
+    min-height: 70vh;
 }
 
 .service-container {
     display: flex;
-    margin-bottom: 2%;
-}
-
-.service-cell {
-    width: 1000px;
-    display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
 }
-/* .service-container div {
-    width: 45%;
-    display: cover;
-} */
 
-/* .service-content, .service-img {
-    width: 5;
-} */
+.service-img {
+    max-width: 600px;
+    min-width: 300px;
+    padding: 1%;
+}
 
 .service-content {
-    margin: 2%;
+    width: 600px;
+    padding: 1%;
 }
 
 .service-content h1 {
     color: goldenrod;
     font-size: 28px;
     margin: 2% 0;  
-    line-height:25px;  
+    line-height: 25px;  
 }
 
 .service-content h2 {
@@ -325,13 +314,6 @@ form label , form input{
     margin: 2% 0;    
     font-weight: bold;
     line-height: 25px;
-}
-
-.service-content li {
-    font-size: 18px;
-    margin: 1% 0;    
-    font-weight: bold;
-
 }
 
 
