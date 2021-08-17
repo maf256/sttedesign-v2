@@ -1,7 +1,5 @@
-let headerTag = document.getElementById('header')
-let foorterTag = document.getElementById('footer')
-
 function header () {
+    let headerTag = document.getElementById('header')
     const menuContainer = document.createElement('div')
     menuContainer.setAttribute('class', 'menu-container')
     const logoLink = document.createElement('a')
@@ -13,6 +11,18 @@ function header () {
     logoLink.append(logoImg)
     menuContainer.append(logoLink)
     const navBar = document.createElement('nav')
+
+    const servicesList = [
+        {href: "ITConsulting.html" , name: "IT Consulting"},
+        {href: "website.html" , name: "Website"},
+        {href: "webshop.html" , name: "Webshops"},
+        {href: "programing.html" , name: "Programming"},
+        {href: "wordpress.html" , name: "Wordpress"},
+        {href: "SEO.html" , name:"SEO"},
+        {href: "Graphic_design.html" , name:"Graphic Design"},
+        {href: "Digitalmarketing.html" , name:"Digital Marketing"}
+    ]
+
     const menuList = [
         {href: './index.html', name: 'Home'},
         {href: './services.html', name: 'Services'},
@@ -22,12 +32,36 @@ function header () {
         {href: './contact.html', name: 'Contact'},
     ]
     for (let i = 0; i < menuList.length; i++) {
-        const span = document.createElement('span')
-        const aTag = document.createElement('a')
+        let span = document.createElement('span')
+        let aTag = document.createElement('a')
         aTag.setAttribute('href',menuList[i].href)
         let name = document.createTextNode(menuList[i].name)
         aTag.append(name)
         span.append(aTag)
+        if (menuList[i].name === 'Services') {
+            aTag.setAttribute('id', 'menu-services')
+            const container = document.createElement('div')
+            container.setAttribute('id', 'services-popup')
+            servicesList.forEach(service => {
+                const serviceATag = document.createElement('a')
+                serviceATag.setAttribute('href', service.href)
+                serviceATag.append(service.name)
+                container.append(serviceATag)
+            })
+            span.addEventListener('mouseover', function() {
+                container.style.display = 'flex';
+            })
+            span.addEventListener('mouseleave', function() {
+                container.style.display = 'none';
+            })
+            span.style.display = 'flex';
+            span.append(container)
+            let arrow = document.createElement('span')
+            arrow.setAttribute('id', 'arrow-down')
+            arrow.append('»')
+            span.append(arrow)
+        }
+
         navBar.append(span)        
     }
     menuContainer.append(navBar)
@@ -52,13 +86,12 @@ function header () {
     headerTag.append(menuContainer)
 }
 
-header()
-
 function footer() {
+    let foorterTag = document.getElementById('footer')
     const div = document.createElement('div')
     div.setAttribute('class', 'Footer')
     const footerList = [
-        {href: 'https://www.facebook.com/sitedesign.no', src: './img/facebook.svg', alt: 'facebookFacebook Logo'},
+        {href: 'https://www.facebook.com/sitedesign.no', src: './img/facebook.svg', alt: 'Facebook Logo'},
         {href: 'https://instagram.com/sitedesign.no', src: './img/instagram.svg', alt:'instagram Logo'},
         {href: 'https://linkedin.com/company/konsulenthuset', src: './img/linkedin.svg', alt:'linkedin Logo'},
         {href: 'mailto:info@sitedesing.no', src: './img/email.svg', alt:'email Logo'},
@@ -82,39 +115,20 @@ function footer() {
     h4.innerHTML = '© 2018 All rights reserved by '
     a2.setAttribute('href','http://sitedesign.no')
     a2.innerHTML = 'Sitedesign.no'
-    // let h = document.createTextNode('☰')
     h4.append(a2)
     div2.append(h4)
-    // div.append(div2)
     foorterTag.append(div)
     foorterTag.append(div2)
-
-    // foorterTag.append(div2)
 }
 
+header()
 footer ()
 
-// function hamOnClick(event) {
-//     let menuContainer = document.querySelectorAll('.menu-container')[0]
-//     let body = document.getElementsByTagName('body')[0]
-//     let ham = document.querySelectorAll('.ham')[0]
-//     if (ham.innerText === '☰') {
-//         ham.innerText = '╳'
-//         menuContainer.setAttribute('id', "ham-show");
-//         body.style.overflow = 'hidden';
-//     } else {
-//         body.style.overflow = 'auto';
-//         ham.innerText = '☰'
-//         menuContainer.setAttribute('id', "");
-//     }
-// }
-
 window.addEventListener('resize', function() {
-    let menuContainer = document.querySelectorAll('.menu-container')[0]
-    let ham = document.querySelectorAll('.ham')[0]
+    let menuContainer = document.querySelector('.menu-container')
+    let ham = document.querySelector('.ham')
     if (window.screen.width > 750) {
         ham.innerText = '☰'
         menuContainer.setAttribute('id', "");
     }
 })
-
