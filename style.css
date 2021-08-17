@@ -14,7 +14,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
 .logo {
     width: 48.5px;
     height: 60px;
@@ -71,7 +70,6 @@ header {
     height: 100px;
     align-items: center;
     padding: 0 5vw;
-    /* position: absolute; */
     top: 0;
     width: 100%;
     background-color: black;
@@ -115,7 +113,7 @@ header {
     padding-bottom: 10%;
     /* font-style: italic; */
     color: rgb(27, 22, 22);
-    font-size: 4.5vw;
+    font-size: 8.5vw;
 }
 
 /* .main-top-img h1:hover {
@@ -127,7 +125,8 @@ header {
 .main-Services , .project-container {
     display: flex;
     justify-content: space-evenly;
-    background-color: #d3d3d3;
+    background-color: #ddd;
+    color: #333;
     width:100%;
     height: auto;
     flex-wrap: wrap;
@@ -135,15 +134,17 @@ header {
 }
 
 .main-Services a , .project-container a {
+    color: #333;
     text-decoration: none;
 }
 
 .main-Services div , .project-container div{
     box-sizing: border-box;
-    width: 300px;
-    height: 300px;
-    background-color: #dbdad5;
-    border: 1px solid rgb(184, 144, 44);
+    width: 320px;
+    height: 340px;
+    background-color: white;
+    box-shadow: 0px 0px 3em rgba(0, 0, 0, 0, .15);
+    /* border: 1px solid rgb(184, 144, 44); */
     margin: 2vh 2vw;
 }
 .main-Services h1 {
@@ -176,10 +177,12 @@ footer {
 }
 .Footer img, .contact-container img {
     width: 35px;
+    height: 35px;
 }
 
 .Footer img:hover, .contact-container img:hover {
     width: 45px;
+    height: 45px;
 }
 
 .Footer span {
@@ -193,6 +196,9 @@ footer {
     justify-content: center;
 }
 
+.copyright h1 {
+    font-size:20px;
+}
 
 /* _______________ Contact us ________________________*/
 
@@ -313,7 +319,7 @@ form label , form input{
     font-size: 18px;
     margin: 2% 0;    
     font-weight: bold;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 

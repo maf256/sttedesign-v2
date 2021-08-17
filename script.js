@@ -77,7 +77,7 @@ function footer() {
     }
     const div2 = document.createElement('div')
     div2.setAttribute('class','copyright')
-    const h4 = document.createElement('h4')
+    const h4 = document.createElement('h1')
     const a2 = document.createElement('a')  
     h4.innerHTML = '© 2018 All rights reserved by '
     a2.setAttribute('href','http://sitedesign.no')
