@@ -95,7 +95,7 @@ function footer() {
         {href: 'https://instagram.com/sitedesign.no', src: './img/instagram.svg', alt:'instagram Logo'},
         {href: 'https://linkedin.com/company/konsulenthuset', src: './img/linkedin.svg', alt:'linkedin Logo'},
         {href: 'mailto:info@sitedesing.no', src: './img/email.svg', alt:'email Logo'},
-        {href: 'tel:+4740186111', src: './img/phone-call.svg', alt:'phone Logo'},
+        {href: 'tel:+4740075666', src: './img/phone-call.svg', alt:'phone Logo'},
     ]
     for (let i = 0; i < footerList.length; i++) {
         const span = document.createElement('span')
