@@ -25,7 +25,10 @@ function header () {
 
     const menuList = [
         {href: './index.html', name: 'Home'},
-        {href: './services.html', name: 'Services'},
+        {href: './services.html', name: `Services <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+        </svg>`},
         {href: './project.html', name: 'Projects'},
         {href: './demo.html', name: 'Demo'},
         {href: './about.html', name: 'About'},
@@ -33,33 +36,34 @@ function header () {
     ]
     for (let i = 0; i < menuList.length; i++) {
         let span = document.createElement('span')
+        span.setAttribute('id', 'menu-services')
         let aTag = document.createElement('a')
         aTag.setAttribute('href',menuList[i].href)
-        let name = document.createTextNode(menuList[i].name)
-        aTag.append(name)
+        aTag.innerHTML = menuList[i].name
         span.append(aTag)
-        if (menuList[i].name === 'Services') {
-            aTag.setAttribute('id', 'menu-services')
+        if (menuList[i].href === './services.html') {
             const container = document.createElement('div')
-            container.setAttribute('id', 'services-popup')
+            container.setAttribute('id', 'services-dropdown')
             servicesList.forEach(service => {
                 const serviceATag = document.createElement('a')
                 serviceATag.setAttribute('href', service.href)
                 serviceATag.append(service.name)
                 container.append(serviceATag)
             })
-            span.addEventListener('mouseover', function() {
-                container.style.display = 'flex';
-            })
-            span.addEventListener('mouseleave', function() {
-                container.style.display = 'none';
-            })
-            span.style.display = 'flex';
+            // span.addEventListener('mouseover', function() {
+            //     container.style.display = 'flex';
+            // })
+            // span.addEventListener('mouseleave', function() {
+            //     container.style.display = 'none';
+            // })
+            // container.addEventListener('mouseover', function() {
+            //     container.style.display = 'flex';
+            // })
+            // container.addEventListener('mouseleave', function() {
+            //     container.style.display = 'none';
+            // })
+            // span.style.display = 'flex';
             span.append(container)
-            let arrow = document.createElement('span')
-            arrow.setAttribute('id', 'arrow-down')
-            arrow.append('»')
-            span.append(arrow)
         }
 
         navBar.append(span)        
