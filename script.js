@@ -25,7 +25,7 @@ function header () {
 
     const menuList = [
         {href: './index.html', name: 'Home'},
-        {href: './services.html', name: `Services <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+        {href: './services.html', name: `Services`, html: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
         <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
         </svg>`},
@@ -41,7 +41,20 @@ function header () {
         aTag.setAttribute('href',menuList[i].href)
         aTag.innerHTML = menuList[i].name
         span.append(aTag)
-        if (menuList[i].href === './services.html') {
+        if (menuList[i].name === 'Services') {
+            if (window.innerWidth <= 750) {
+                aTag.href = "#"
+            } else {
+                aTag.href = menuList[i].href
+            }
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 750) {
+                    aTag.href = "#"
+                } else {
+                    aTag.href = menuList[i].href
+                }
+            })
+            aTag.innerHTML = menuList[i].name + " " + menuList[i].html
             const container = document.createElement('div')
             container.setAttribute('id', 'services-dropdown')
             servicesList.forEach(service => {
@@ -50,19 +63,6 @@ function header () {
                 serviceATag.append(service.name)
                 container.append(serviceATag)
             })
-            // span.addEventListener('mouseover', function() {
-            //     container.style.display = 'flex';
-            // })
-            // span.addEventListener('mouseleave', function() {
-            //     container.style.display = 'none';
-            // })
-            // container.addEventListener('mouseover', function() {
-            //     container.style.display = 'flex';
-            // })
-            // container.addEventListener('mouseleave', function() {
-            //     container.style.display = 'none';
-            // })
-            // span.style.display = 'flex';
             span.append(container)
         }
 
