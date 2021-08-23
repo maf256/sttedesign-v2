@@ -5,7 +5,7 @@ function header () {
     const logoLink = document.createElement('a')
     logoLink.setAttribute('href','http://sitedesign.no/')
     const logoImg = document.createElement ('img')
-    logoImg.setAttribute('src','./img/logo.png')
+    logoImg.setAttribute('src','./img/logo2626.png')
     logoImg.setAttribute('class','logo')
     logoImg.setAttribute('alt','sitedesign logo')
     logoLink.append(logoImg)
