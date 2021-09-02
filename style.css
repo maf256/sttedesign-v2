@@ -124,7 +124,7 @@ header {
     max-width: 750px;
 }
 .menu-container a {
-    color :rgb(202, 185, 185);
+    color : #F5ECDC;
     font-size: 20px;
     text-decoration: none;
 }
@@ -151,6 +151,11 @@ header {
     font-size: 6.5vw;
 }
 
+.main-top-img img {
+    width: 35vw;
+    height: 35vw;
+}
+
 .main-Services , .project-container {
     display: flex;
     justify-content: space-evenly;
@@ -161,7 +166,10 @@ header {
     flex-wrap: wrap;
     padding: 7%;
 }
-.main-Services a h1 { color: #DAA520}
+.main-Services a h1 { 
+    color: #DAA520;
+    text-shadow: 2px 2px #aca7a7;
+}
 
 .main-Services a , .project-container a {
     color: #333;
@@ -183,7 +191,7 @@ header {
 
 }
 
-.main-Services p , .contact-container p , .contact-container span{
+.main-Services p {
     text-align: inherit;
     font-weight: bold;
     font-size:20px;  
@@ -204,12 +212,12 @@ footer {
     padding-top: 2%;
   
 }
-.Footer img, .contact-container img {
+.Footer img, .service-content div a img {
     width: 35px;
     height: 35px;
 }
 
-.Footer img:hover, .contact-container img:hover {
+.Footer img:hover {
     width: 45px;
     height: 45px;
 }
@@ -230,7 +238,7 @@ footer {
 }
 
 /* _______________ Contact us ________________________*/
-
+/* 
 .contact-container {
     background-color: #dbdad5;
     padding: 5% 20%;
@@ -264,7 +272,7 @@ footer {
 
 .contact-container div span {
     font-size: 18px;
-}
+} */
 
 form {
     padding-top: 5%;
@@ -329,6 +337,15 @@ form label , form input{
 .service-content {
     width: 600px;
     padding: 1%;
+}
+
+.service-content a {
+    color: black;
+    align-items: center;
+    text-decoration: none;
+    font-size:20px;
+    font-weight: bold;
+
 }
 
 .service-content h1 {
